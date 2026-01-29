@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:latest
+    build: .
+    container_name: notes_container
+    volumes:
+      - data:/data
+    ports:
+      - "3000:3000"
+
+volumes:
+  data:
