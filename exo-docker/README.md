@@ -1,7 +1,7 @@
 
 # Exercice de rappel — Dockerfile & docker-compose
 
-Contexte (module **324**) : Prendre en charge le processus DevOps avec les outils logiciels
+Contexte (module **324**) : Prendre en charge le processus DevOps avec les outils logicielss
 
 Les conteneurs et plus particulièrement Docker a été vu lors de précédent modules. 
 Il s'agit ici d'un petit rappel afin de vous remémorer cette thématique pour la suite du module 324.
