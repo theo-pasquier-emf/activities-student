@@ -1,0 +1,33 @@
+version: "3.9"
+ 
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: db_annonces
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: userpwd
+ 
+  db:
+    image: mysql:8.0
+    ports:
+      - "3006:3006"
+    environment:
+      MYSQL_DATABASE: db_annonces
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: userpwd
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/db/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql:ro
+ 
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+ 
+volumes:
+  db_data:
