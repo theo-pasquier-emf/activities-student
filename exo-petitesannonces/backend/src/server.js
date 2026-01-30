@@ -4,10 +4,11 @@
  * @author Les enseignants EMF du module 324
  * @version 1.0
  */
-
+require("dotenv").config();
 const config = require('./config/config');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 
 const annoncesRoutes = require('./routes/annonceRoutes');
 
