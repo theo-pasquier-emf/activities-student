@@ -459,7 +459,7 @@ metadata:
 spec:
   ingressClassName: nginx # classe d'Ingress gérée par l'Ingress Controller NGINX
   rules:
-    - host: peppermint.X.X.X.X.nip.io # nom DNS public (nip.io résout l'IP encodée dans le nom), demander l'ip publique du controller ingress à votre enseignant si inconnu.
+    - host: peppermint-votre-ns.X.X.X.X.nip.io # nom DNS public (nip.io résout l'IP encodée dans le nom), demander l'ip publique du controller ingress à votre enseignant si inconnu.
       http:
         paths:
           - path: /
@@ -477,7 +477,7 @@ kubectl get ingress
 ```
 
 ### Résultat attendu
-- Accès via navigateur public http://peppermint.X.X.X.X.nip.io
+- Accès via navigateur public http://peppermint-votre-ns.X.X.X.X.nip.io
 - Application fonctionnelle
 
 ---

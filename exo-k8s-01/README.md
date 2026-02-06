@@ -8,7 +8,7 @@ Voici le texte corrigé (orthographe, accents et quelques accords), sans modific
 
 Objectif : installer `kubectl` sous Windows et configurer l'accès au cluster via un fichier kubeconfig (fourni).
 
-1. Installer kubectl avec winget
+1. Installer kubectl avec winget (via console powershell)
 
 ```powershell
 winget install -e --id Kubernetes.kubectl
@@ -61,7 +61,7 @@ kubectl get ns
 
 Attendu : une liste de nodes au statut `Ready` et une liste de namespaces (`default`, `kube-system`, etc.).
 
-2. Créer un namespace (si nécessaire)
+2. Seulement si vous n'avez pas de namespace attribué, Créer un namespace (si nécessaire) 
    Pourquoi : un namespace isole des ressources et évite les conflits de noms avec d'autres exercices.
 
 ```bash
@@ -73,6 +73,7 @@ Attendu : `namespace/my-ns created` (ou un message indiquant qu'il existe déjà
 3. Lancer rapidement un Pod (approche impérative avec kubectl run)
    Pourquoi : l'approche impérative est utile pour tester vite, mais elle est moins reproductible que le YAML.
 
+*** A partir d'ici remplacer "my-ns" par le nom de votre namespace si il est différent ***
 ```bash
 kubectl run nginx --image=nginxdemos/hello --restart=Never -n my-ns
 kubectl get pods -n my-ns
