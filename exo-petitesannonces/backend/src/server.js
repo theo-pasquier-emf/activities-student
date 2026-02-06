@@ -5,6 +5,7 @@
  * @version 1.0
  */
 require("dotenv").config();
+const coucou = "AS";
 const config = require('./config/config');
 const cors = require('cors');
 const bodyParser = require('body-parser');
